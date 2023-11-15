@@ -10,30 +10,39 @@ public class Generador : MonoBehaviour
     public GameObject newCube;
 
     public GameObject newSphere;
+    public GameObject Enemy;
+    public GameObject Ammo;
+    public GameObject PlusHealth;
 
-    public float minX = 10f;
+    private float minX = 100f;
 
-    public float maxX = 30f;
+    private float maxX = 750f;
 
-    public float minY = 1f;
+    private float minY = 1f;
 
-    public float maxY = 5f;
+    private float maxY = 2f;
 
-    public float minZ = 10f;
+    private float minZ = 150f;
 
-    public float maxZ = 25f;
+    private float maxZ = 600f;
 
  
 
-    public int InitialCantCubes = 20;
+    private int InitialCantCubes = 20;
 
-    public int InitialCantSpheres = 20;
+    private int InitialCantSpheres = 20;
+    private int InitialCantEnemys = 40;
+    private int InitialCantAmmo = 20;
+    private int InitialCantPlusHealth = 20;
 
  
 
     private int generatedCubes = 0;
 
     private int generatedSpheres = 0;
+    private int generatedEnemys = 0;
+    private int generatedAmmo = 0;
+    private int generatedPlusHealth = 0;
 
  
 
@@ -44,8 +53,10 @@ public class Generador : MonoBehaviour
         // Initial cubes and spheres generator
 
         prefabsGenerator("Cube", InitialCantCubes);
-
         prefabsGenerator("Sphere", InitialCantSpheres);
+        prefabsGenerator("Enemy", InitialCantEnemys);
+        prefabsGenerator("Ammo", InitialCantAmmo);
+        prefabsGenerator("PlusHealth", InitialCantPlusHealth);
 
     }
 
@@ -76,7 +87,6 @@ public class Generador : MonoBehaviour
  
 
         if (prefabObject == "Cube" && generatedCubes < 100000)
-
         {
 
             newPrefab = Instantiate(newCube, new Vector3(Random.Range(minX, maxX), Random.Range(minY, maxY), Random.Range(minZ, maxZ)), Quaternion.identity);
@@ -86,9 +96,7 @@ public class Generador : MonoBehaviour
             generatedCubes++;
 
         }
-
         else if (prefabObject == "Sphere" && generatedSpheres < 100000)
-
         {
 
             newPrefab = Instantiate(newSphere, new Vector3(Random.Range(minX, maxX), Random.Range(minY, maxY), Random.Range(minZ, maxZ)), Quaternion.identity);
@@ -96,6 +104,36 @@ public class Generador : MonoBehaviour
             newPrefab.tag = "Sphere";
 
             generatedSpheres++;
+
+        }
+        else if (prefabObject == "Enemy" && generatedEnemys < 100000)
+        {
+
+            newPrefab = Instantiate(Enemy, new Vector3(Random.Range(minX, maxX), Random.Range(minY, maxY), Random.Range(minZ, maxZ)), Quaternion.identity);
+
+            newPrefab.tag = "Enemy";
+
+            generatedEnemys++;
+
+        }
+        else if (prefabObject == "Ammo" && generatedAmmo < 100000)
+        {
+
+            newPrefab = Instantiate(Ammo, new Vector3(Random.Range(minX, maxX), Random.Range(minY, maxY), Random.Range(minZ, maxZ)), Quaternion.identity);
+
+            newPrefab.tag = "Ammo";
+
+            generatedAmmo++;
+
+        }
+        else if (prefabObject == "PlusHealth" && generatedAmmo < 100000)
+        {
+
+            newPrefab = Instantiate(PlusHealth, new Vector3(Random.Range(minX, maxX), Random.Range(minY, maxY), Random.Range(minZ, maxZ)), Quaternion.identity);
+
+            newPrefab.tag = "PlusHealth";
+
+            generatedPlusHealth++;
 
         }
 

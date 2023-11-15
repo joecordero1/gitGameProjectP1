@@ -7,6 +7,8 @@ public class Shooted : Target
     private float scaleFactor = 0.8f;  // Factor de escala para reducir el tamaño del objeto.
     private int maxImpacts = 5;        // Número máximo de impactos permitidos.
     public int currentImpacts = 0;     // Contador de impactos actuales.
+    public GameObject R_Point;
+    private GameObject newR_Point;
 
     public void ReduceScale()
     {
@@ -24,6 +26,9 @@ public class Shooted : Target
         // Comprueba si se alcanzó el número máximo de impactos.
         if (currentImpacts >= maxImpacts)
         {
+            //Instanciar R_Point justo donde se encuentra el gameObject a destruir
+            newR_Point = Instantiate(R_Point, transform.position, transform.rotation);
+
             Destroy(gameObject);  // Destruye el objeto si se supera el número máximo de impactos.
         }
     }

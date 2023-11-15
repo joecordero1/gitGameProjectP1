@@ -7,6 +7,9 @@ public class FirstPersonMovement : MonoBehaviour
     public float speed = 5;
     public int health = 100;
     public int currentHealth;
+    public HealthScript _healthbar;
+    public int R_Points;    
+    public int RecyclingPoints; 
 
     [Header("Running")]
     public bool canRun = true;
@@ -28,6 +31,7 @@ public class FirstPersonMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        
         // Update IsRunning from input.
         IsRunning = canRun && Input.GetKey(runningKey);
 
@@ -43,5 +47,6 @@ public class FirstPersonMovement : MonoBehaviour
 
         // Apply movement.
         rigidbody.velocity = transform.rotation * new Vector3(targetVelocity.x, rigidbody.velocity.y, targetVelocity.y);
+        //_healthbar.UpdateHealthbar(health,currentHealth);
     }
 }
