@@ -7,6 +7,14 @@
         {
             "playerName": "Joe",
             "playerPoints": "30"
+        },
+        {
+            "playerName": "Juan",
+            "playerPoints": "8"
+        },
+        {
+            "playerName": "Ariel",
+            "playerPoints": "32"
         }
     ]
 }
