@@ -1,5 +1,5 @@
 # gitGameProjectP1
-
+#Aplicación de principios y arquitecturas de sistemas hipermedia
 # JOE'S RECYCLING GAME
 Link del video en Loom:
 https://www.loom.com/share/b1e6ea3d6a9443faa4874845f7d37bc8?sid=37620d5c-7e74-4946-9a50-b19643d223fa
