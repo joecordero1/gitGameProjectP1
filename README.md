@@ -3,6 +3,7 @@
 # JOE'S RECYCLING GAME
 Link del video en Loom:
 https://www.loom.com/share/b1e6ea3d6a9443faa4874845f7d37bc8?sid=37620d5c-7e74-4946-9a50-b19643d223fa
+
 https://www.loom.com/share/2737385461134cd099ee9f044ce99ec9?sid=8876fa86-c954-4d81-bdf3-c508dfe67a41
 ## Game Overview
 Desert Recycling Shooter is a first-person shooter game where you navigate through a desert landscape filled with dry trees, cacts, rocks, and various enemies. Your goal is to survive enemy attacks, collect trash from the enemies, and go to the next level, where you should take recyclable materials, and ultimately achieve a high recycling score.
