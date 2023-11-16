@@ -112,7 +112,7 @@
         private void OnDrawGizmos()
         {
             // Dibuja un rayo en la escena para visualizar el alcance del disparo.
-            Gizmos.color = Color.green;
+            Gizmos.color = Color.blue;
             Gizmos.DrawRay(Camera.main.transform.position, Camera.main.transform.forward * range);
         }
     }

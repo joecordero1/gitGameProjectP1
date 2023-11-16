@@ -123,6 +123,53 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &2122993
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2122995}
+  - component: {fileID: 2122994}
+  m_Layer: 0
+  m_Name: Writter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2122994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2122993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1106bad2bc0f9b144b790c02a030f468, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myPlayerList:
+    players: []
+  jsonFilePath: /playerlist.json
+--- !u!4 &2122995
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2122993}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 468.2, y: 223.4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5394069
 GameObject:
   m_ObjectHideFlags: 0
@@ -459,7 +506,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 195483720}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 269194476}
+        m_TargetAssemblyTypeName: GameOverScript, Assembly-CSharp
+        m_MethodName: MainMenuGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &195483720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -710,7 +769,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &269194475
 RectTransform:
   m_ObjectHideFlags: 0
@@ -744,6 +803,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58e3d6f57e404384faa7e758ec62f649, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rayCastShootScript: {fileID: 0}
+  SceneLoader: {fileID: 1134257897}
+  jsonWritter: {fileID: 2122994}
 --- !u!114 &269194477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1608,7 +1670,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Restart
+  m_text: Go to main menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
   m_sharedMaterial: {fileID: 2147374, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
@@ -2554,9 +2616,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c26f88d3034abfb42a6cab862b9f6ced, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPoints: {fileID: 1756014040}
   Points: 0
   _GameOverScene: {fileID: 269194476}
+  backgroundMusic: {fileID: 5394070}
 --- !u!4 &1559832394 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 686508543496338057, guid: 3773d0ae256dc594ea12defa93a67c26, type: 3}
@@ -3422,6 +3484,7 @@ MonoBehaviour:
   range: 50
   effect: {fileID: 7362615935736570159, guid: 01779cd7299e4ba42bc500f555f84193, type: 3}
   force: 4
+  canShoot: 1
   div: 0
   div2: 0
   countCubes: 0
@@ -3823,3 +3886,4 @@ SceneRoots:
   - {fileID: 102881212}
   - {fileID: 1282833226}
   - {fileID: 5394071}
+  - {fileID: 2122995}

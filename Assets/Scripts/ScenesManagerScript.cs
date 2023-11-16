@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class ScenesManagerScript : MonoBehaviour
 {
-    public static string previousLevel; // Variable estática para mantener el nombre de la escena anterior
+    public static string previousLevel; 
 
     public void LoadLevel(string levelName)
     {
+        Time.timeScale = 1;
         previousLevel = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name; // Guardar la escena actual
         UnityEngine.SceneManagement.SceneManager.LoadScene(levelName); // Cargar una nueva escena
+    }
+    public void LoadAgain(string levelName)
+    {
+        Time.timeScale = 1;
+        UnityEngine.SceneManagement.SceneManager.LoadScene(levelName); // Cargar una escena de nuevo
     }
 
     public void LoadPreviousLevel()

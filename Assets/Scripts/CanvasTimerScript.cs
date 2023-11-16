@@ -6,7 +6,7 @@ using TMPro;
 
 public class CanvasTimerScript : MonoBehaviour
 {
-    private float timer = 30f;
+    private float timer = 20f;
     public TMP_Text timerSeconds;   // Texto para mostrar el timer
     public ScenesManagerScript SceneLoader;
 

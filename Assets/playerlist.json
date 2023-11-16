@@ -1,0 +1,12 @@
+{
+    "players": [
+        {
+            "playerName": "Sebas",
+            "playerPoints": "0"
+        },
+        {
+            "playerName": "Joe",
+            "playerPoints": "30"
+        }
+    ]
+}

@@ -5,7 +5,9 @@ using UnityEngine;
 public class GameOverScript : MonoBehaviour
 {
     public RayCastShoot rayCastShootScript;
-    // Start is called before the first frame update
+    public ScenesManagerScript SceneLoader;
+    public JsonWritter jsonWritter; // Referencia al script JsonWritter
+
     public void Setup()
     {
         gameObject.SetActive(true);
@@ -19,13 +21,23 @@ public class GameOverScript : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
     }
 
-    // Llamar a este método cuando se reinicie el juego
-    public void ResetGame()
+    public void RestartGame()
     {
-        // Opcionalmente, restablecer el estado de juego aquí
+        if (PlayerData.Instance != null)
+        {
+            PlayerData.Instance.ResetPlayerPoints(); // Restablecer puntos del jugador
+        }
+        SceneLoader.LoadAgain("SampleScene");
+    }
 
-        // Bloquear y ocultar el cursor nuevamente para el juego
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+    public void MainMenuGame()
+    {
+        // Guardar los datos del jugador en el JSON y luego regresar al menú principal
+        if (PlayerData.Instance != null)
+        {
+            jsonWritter.AddPlayerData(PlayerData.Instance.playerName, PlayerData.Instance.playerPoints);
+            PlayerData.Instance.ResetPlayerName(); // Restablecer el nombre del jugador
+        }
+        SceneLoader.LoadAgain("MainMenu");
     }
 }

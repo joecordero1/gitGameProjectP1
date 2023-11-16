@@ -33,7 +33,7 @@ public class Timer2Canvas : MonoBehaviour
 
             // Carga el nivel una vez que el temporizador llegue a cero
             // Asegúrate de que LevelToLoad tenga un valor asignado en el Inspector
-            SceneLoader.LoadLevel("SampleScene");
+            SceneLoader.LoadPreviousLevel();
         }
     }
 }

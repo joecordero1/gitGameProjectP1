@@ -14,7 +14,6 @@ public class R_PointScript : MonoBehaviour
             Destroy(gameObject);
             playerPoints.R_Points++;
             if(playerPoints.R_Points == 3){
-                Debug.Log("ENTRA ");
                 playerPoints.R_Points = 0;
                 SceneLoader.LoadLevel(SceneName);
             }
