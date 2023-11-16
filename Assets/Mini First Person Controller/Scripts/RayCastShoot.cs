@@ -9,6 +9,7 @@
         public GameObject effect;  // Efecto visual cuando el rayo impacta.
         public float force = 4;   // Fuerza del impacto.
         private AudioSource audioSource; // Referencia al AudioSource
+        public bool canShoot = true; // Controla si el jugador puede disparar
 
 
         // Contadores para cubos y esferas destruidos.
@@ -35,7 +36,7 @@
 
         void Update()
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && canShoot)
             {
                 // Verifica si hay balas disponibles antes de disparar
                 if (bulletsLeft > 0)
