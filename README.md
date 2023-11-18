@@ -37,6 +37,10 @@ Desert Recycling Shooter is a first-person shooter game where you navigate throu
 # Programming exclusive Features
 
 ## Health and Ammo Pickups
+![ammo](https://github.com/joecordero1/gitGameProjectP1/assets/120497590/a05dad7b-c567-4363-92e2-d578928f98f0)
+
+![plushealth](https://github.com/joecordero1/gitGameProjectP1/assets/120497590/6c2a337c-95b0-42bd-a20c-3b10cd83b376)
+
 - Players start with a limited supply of ammo and health.
 - Each shot fired depletes the ammo count.
 - Each shot received from enemies depletes health.
@@ -163,8 +167,15 @@ Desert Recycling Shooter is a first-person shooter game where you navigate throu
 - The game includes multiple levels with unique challenges and environments.
 - Scenes:
       -MainMenu
+      ![Captura de pantalla 2023-11-18 005045](https://github.com/joecordero1/gitGameProjectP1/assets/120497590/deeb4ba7-0e72-4701-bd8b-284d586828e7)
       -SampleScene
+      ![Captura de pantalla 2023-11-18 005133](https://github.com/joecordero1/gitGameProjectP1/assets/120497590/06d03b3e-5eae-4ee8-af5a-6b4b5bc00552)
       -RecyclingScene
+      ![Captura de pantalla 2023-11-18 005149](https://github.com/joecordero1/gitGameProjectP1/assets/120497590/f0761071-4304-4340-8641-2f27e859bdad)
+      -GameOver canvas
+      ![Captura de pantalla 2023-11-18 005229](https://github.com/joecordero1/gitGameProjectP1/assets/120497590/f5cd89b2-2f9f-4cbd-bab4-a213b065f778)
+    	-You win canvas
+      ![Captura de pantalla 2023-11-18 005205](https://github.com/joecordero1/gitGameProjectP1/assets/120497590/1fb766dc-9835-411b-b41f-756cdce0414b)
 - Transition between levels is managed by `ScenesManagerScript.cs`.
 - each scene is loaded using colliders or buttons in case of MainMenuScene, You Win and Game Over canvas.
 ### R_PointScript.cs
@@ -275,6 +286,8 @@ public class PlayerData : MonoBehaviour
 }
 ```
 
+![Captura de pantalla 2023-11-18 005520](https://github.com/joecordero1/gitGameProjectP1/assets/120497590/19d0ed9c-b009-4246-99a4-5dad118716ac)
+
 ## Enemy AI
 - Enemies detect player's proximity and engage in pursuit if the player tries to escape.
 - Enemies patroll looking for the player.
@@ -374,10 +387,19 @@ public class enemyFollow : MonoBehaviour
         
     }
 ```
+Patroling
+![Captura de pantalla 2023-11-18 005738](https://github.com/joecordero1/gitGameProjectP1/assets/120497590/a52f4b84-84b2-4dce-b886-e28a8a07b0ef)
+Chasing
+![Captura de pantalla 2023-11-18 005624](https://github.com/joecordero1/gitGameProjectP1/assets/120497590/c41db46a-a227-4a83-85c7-d9ff9159f040)
+Attack
+![Captura de pantalla 2023-11-18 005706](https://github.com/joecordero1/gitGameProjectP1/assets/120497590/d67f57b0-2fae-44a1-ad90-1062a5deebae)
 
 ## Animations
 - Animated objects such as recyclable items and enemy reactions enhance the game's visual feedback.
 - Scripts like `RecycledObjScript.cs` and `R_PointScript.cs` manage the collection of this objects to gain points.
+![can animation](https://github.com/joecordero1/gitGameProjectP1/assets/120497590/56e86bf9-6cd1-4672-b3fc-b6d0aa3ac6bd)
+
+![batteryanimation](https://github.com/joecordero1/gitGameProjectP1/assets/120497590/491ec912-f0a8-4d6d-a3e2-3db2ea205a5b)
 ### RecycledObjScript.cs
 ```csharp
 public class RecycledObjScript : MonoBehaviour
@@ -443,6 +465,10 @@ public class Shooted : Target
 }
 
 ```
+Enemy with no impacts is big:
+![Captura de pantalla 2023-11-18 010357](https://github.com/joecordero1/gitGameProjectP1/assets/120497590/dde670bb-c6cd-40e7-8b7c-29ec317061cd)
+Enemy after 4 impacts is smaller:
+![Captura de pantalla 2023-11-18 010512](https://github.com/joecordero1/gitGameProjectP1/assets/120497590/6439f498-dd04-4fc0-ab97-a404324958ad)
 
 ## Automatic Generation
 - The game world dynamically generates enemies and pickups to maintain a consistent challenge and resource availability.
