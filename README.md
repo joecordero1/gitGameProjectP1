@@ -2,9 +2,10 @@
 #Aplicación de principios y arquitecturas de sistemas hipermedia
 # JOE'S RECYCLING GAME
 Link del video en Loom:
-https://www.loom.com/share/b1e6ea3d6a9443faa4874845f7d37bc8?sid=37620d5c-7e74-4946-9a50-b19643d223fa
 
-https://www.loom.com/share/2737385461134cd099ee9f044ce99ec9?sid=8876fa86-c954-4d81-bdf3-c508dfe67a41
+Video 1: https://www.loom.com/share/b1e6ea3d6a9443faa4874845f7d37bc8?sid=37620d5c-7e74-4946-9a50-b19643d223fa
+
+Video 2: https://www.loom.com/share/2737385461134cd099ee9f044ce99ec9?sid=8876fa86-c954-4d81-bdf3-c508dfe67a41
 ## Game Overview
 Desert Recycling Shooter is a first-person shooter game where you navigate through a desert landscape filled with dry trees, cacts, rocks, and various enemies. Your goal is to survive enemy attacks, collect trash from the enemies, and go to the next level, where you should take recyclable materials, and ultimately achieve a high recycling score.
 
@@ -538,6 +539,8 @@ public class Generador : MonoBehaviour
     }
 }
 ```
+Map with enemies, ammo and health objects generated all around the terrain
+![Captura de pantalla 2023-11-18 010748](https://github.com/joecordero1/gitGameProjectP1/assets/120497590/e33b8ff9-167d-45ca-85c7-31e9c39596cc)
 
 Each feature is carefully crafted to create an engaging and dynamic gameplay experience. Scripts interact with Unity's physics, audio, and animation systems to bring the desert wasteland and its challenges to life
 
