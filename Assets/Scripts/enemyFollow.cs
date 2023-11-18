@@ -10,7 +10,7 @@ public class enemyFollow : MonoBehaviour
     public GameObject enemyBullet; // Prefab del proyectil del enemigo
     public Transform spawnPoint; // Punto de generación del proyectil
     public float enemySpeed; // Velocidad del proyectil
-    public NavMeshAgent myEnemy; // Agente de navegación del enemigo
+    public NavMeshAgent myEnemy; // Enemigo
     public Transform myPlayer; // Jugador
 
     private GameObject bulletObj; // Referencia al proyectil
@@ -52,10 +52,6 @@ public class enemyFollow : MonoBehaviour
         if(playerInSightRange && playerInAttackRange){
             ShootAtPlayer();
         }
-        // Establece la posición de destino del enemigo al jugador
-        //myEnemy.SetDestination(myPlayer.position);
-        // Llama a la función para disparar al jugador
-        //ShootAtPlayer();
     }
 
     // Función para disparar al jugador
@@ -125,19 +121,5 @@ public class enemyFollow : MonoBehaviour
     private void ChasePlayer(){
         myEnemy.SetDestination(myPlayer.position);
     }
-    /*
-    private void AttackPlayer(){
-        //asegurarse de que el enemigo ya no se mueva
-        myEnemy.SetDestination(transform.position);
-        transform.LookAt(myPlayer);
-        if(!alreadyAttacked){
-            ShootAtPlayer();
-            alreadyAttacked = true;
-            Invoke(nameof(ResetAttack), timeBetweenAttacks);
-        }
-    }
-    */
-    public void ResetAttack(){
-        alreadyAttacked = false;
-    }
+    
 }

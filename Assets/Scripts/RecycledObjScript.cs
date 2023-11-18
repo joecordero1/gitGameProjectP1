@@ -6,14 +6,15 @@ using TMPro;
 public class RecycledObjScript : MonoBehaviour
 {
     public FirstPersonMovement playerPoints;
+    public int pointsCounter;
     public TMP_Text CounterPointsText;   // Texto para mostrar puntos
     void Start()
     {
-        CounterPointsText.SetText("Recycling points: " + playerPoints.RecyclingPoints);
+        CounterPointsText.SetText("New points: " + playerPoints.RecyclingPoints);
     }
     void Update()
     {
-        CounterPointsText.SetText("Recycling points: " + playerPoints.RecyclingPoints);
+        CounterPointsText.SetText("New points: " + playerPoints.RecyclingPoints);
 
     }
     private void OnTriggerEnter(Collider other)
@@ -21,7 +22,6 @@ public class RecycledObjScript : MonoBehaviour
         if(other.gameObject.tag == "Player"){
             Destroy(gameObject);
             playerPoints.RecyclingPoints++;
-            
         }
     }
 }

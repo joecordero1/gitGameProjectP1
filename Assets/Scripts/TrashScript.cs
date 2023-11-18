@@ -1,12 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class TrashScript : MonoBehaviour
 {
     public int Points;
     public GameOverScript _GameOverScene;
     public AudioSource backgroundMusic;
+    public TMP_Text totalPointsText;   // Texto para mostrar puntos
+    void Start()
+    {
+        totalPointsText.SetText("Recycled points: " + PlayerData.Instance.playerPoints);
+    }
+    void Update()
+    {
+        totalPointsText.SetText("Recycled points: " + PlayerData.Instance.playerPoints);
+
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
@@ -17,6 +28,7 @@ public class TrashScript : MonoBehaviour
             if (player != null)
             {
                 // Añadir puntos al total y resetear los puntos de reciclaje del jugador
+                totalPointsText.SetText("Recycled points: " + PlayerData.Instance.playerPoints);
                 PlayerData.Instance.AddPoints(player.RecyclingPoints);
                 player.RecyclingPoints = 0;
 
