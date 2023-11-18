@@ -19,6 +19,10 @@
         {
             "playerName": "Mateo",
             "playerPoints": "30"
+        },
+        {
+            "playerName": "pepe",
+            "playerPoints": "0"
         }
     ]
 }
