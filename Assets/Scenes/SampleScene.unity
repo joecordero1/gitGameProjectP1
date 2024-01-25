@@ -2161,6 +2161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adafdf0ad87d7be45af2aa515833878f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dataSO: {fileID: 11400000, guid: 68ad02d59ceb76f4ea4aa0137bc702c6, type: 2}
   playerPoints: {fileID: 1547260888}
   SceneLoader: {fileID: 1743333541}
   SceneName: RecyclingBackRooms

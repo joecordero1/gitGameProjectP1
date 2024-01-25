@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class R_PointScript : MonoBehaviour
 {
+    public RecyclableFlyweight dataSO;
     public FirstPersonMovement playerPoints;
     public ScenesManagerScript SceneLoader;
     public string SceneName;
@@ -12,7 +13,7 @@ public class R_PointScript : MonoBehaviour
     {
         if(other.gameObject.tag == "Player"){
             Destroy(gameObject);
-            playerPoints.R_Points++;
+            playerPoints.R_Points = playerPoints.R_Points + dataSO.puntos;
             if(playerPoints.R_Points == 3){
                 playerPoints.R_Points = 0;
                 SceneLoader.LoadLevel(SceneName);

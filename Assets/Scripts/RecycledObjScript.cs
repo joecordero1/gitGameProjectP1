@@ -6,8 +6,9 @@ using TMPro;
 public class RecycledObjScript : MonoBehaviour
 {
     public FirstPersonMovement playerPoints;
-    public int pointsCounter;
     public TMP_Text CounterPointsText;   // Texto para mostrar puntos
+
+    public RecyclableFlyweight dataSO;
     void Start()
     {
         CounterPointsText.SetText("New points: " + playerPoints.RecyclingPoints);
@@ -21,7 +22,7 @@ public class RecycledObjScript : MonoBehaviour
     {
         if(other.gameObject.tag == "Player"){
             Destroy(gameObject);
-            playerPoints.RecyclingPoints++;
+            playerPoints.RecyclingPoints = playerPoints.RecyclingPoints + dataSO.puntos;
         }
     }
 }
